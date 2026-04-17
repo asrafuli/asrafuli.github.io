@@ -372,6 +372,67 @@
       color: var(--text-muted);
     }
 
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    @media (max-width: 640px) {
+      .about-grid { grid-template-columns: 1fr; }
+    }
+
+    .about-bio {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.85;
+    }
+
+    .about-bio p + p { margin-top: 14px; }
+
+    .about-bio strong {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .about-details {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .about-detail-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 14px 16px;
+      background: var(--bg-surface);
+      border-radius: var(--radius-md);
+      border: 0.5px solid var(--border);
+    }
+
+    .about-detail-label {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    .about-detail-value {
+      font-size: 14px;
+      color: var(--text-primary);
+    }
+
+    .about-email {
+      color: var(--amber-400);
+      text-decoration: none;
+    }
+
+    .about-email:hover { color: var(--amber-600); }
+
     /* NEWSLETTER */
     .newsletter {
       background: var(--amber-50);
@@ -573,6 +634,40 @@
 
   <hr />
 
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-header">
+      <span class="section-label">About</span>
+    </div>
+    <div class="about-grid">
+      <div class="about-bio">
+        <p>I'm <strong>Asraful Islam</strong> — a tech enthusiast, writer, and perpetual wonderer based on the internet. I spend my days thinking about where technology is taking us and writing essays that try to make sense of it all.</p>
+        <p>My writing sits at the intersection of <strong>emerging technology</strong>, <strong>digital society</strong>, and the quieter human questions that rarely make the headlines. I'm less interested in hype than in what actually changes the way we live and work.</p>
+        <p>When I'm not writing, I'm reading, building small things, or staring at a blank page wondering if the idea I had was actually good.</p>
+      </div>
+      <div class="about-details">
+        <div class="about-detail-row">
+          <span class="about-detail-label">Focus areas</span>
+          <span class="about-detail-value">AI, Future of Work, Startups, Digital Society</span>
+        </div>
+        <div class="about-detail-row">
+          <span class="about-detail-label">Writing since</span>
+          <span class="about-detail-value">2021</span>
+        </div>
+        <div class="about-detail-row">
+          <span class="about-detail-label">Location</span>
+          <span class="about-detail-value">Somewhere with good coffee</span>
+        </div>
+        <div class="about-detail-row">
+          <span class="about-detail-label">Get in touch</span>
+          <span class="about-detail-value"><a href="mailto:asraful@live.com" class="about-email">asraful@live.com</a></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr />
+
   <!-- NEWSLETTER -->
   <section id="newsletter">
     <div class="newsletter">
@@ -593,7 +688,7 @@
     <div class="footer-links">
       <a href="#">Twitter</a>
       <a href="#">RSS feed</a>
-      <a href="#">Contact</a>
+      <a href="mailto:asraful@live.com">Contact</a>
     </div>
   </footer>
 
